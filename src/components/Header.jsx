@@ -57,7 +57,7 @@ const Header = () => {
                 </button>
               </a>
               <a
-                href="https://www.linkedin.com/in/mirmansur-rakhmatov-5aa051323/"
+                href="https://www.linkedin.com/in/mirmansur-rakhmatov-46b37732b/"
                 aria-label="LinkedIn Profile"
               >
                 <button className="border-none">

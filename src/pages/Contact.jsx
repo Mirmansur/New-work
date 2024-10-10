@@ -38,7 +38,7 @@ const Contact = () => {
                 <a href="https://github.com/Mirmansur">
                   <FaGithub className="text-2xl" />
                 </a>
-                <a href="https://www.linkedin.com/in/mirmansur-rakhmatov-5aa051323/">
+                <a href="https://www.linkedin.com/in/mirmansur-rakhmatov-46b37732b/">
                   <FaLinkedin className="text-2xl" />
                 </a>
               </div>
