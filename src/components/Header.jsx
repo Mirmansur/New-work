@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import logo from "../assets/logo1.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "../i18n";
@@ -33,21 +32,19 @@ const Header = () => {
           {/* ////////////////////////////////////////////////////////////////////////////////// */}
           <div className="-translate-y-full peer-checked:translate-y-0 lg:translate-y-0 inset-0 fixed lg:static pt-20 lg:pt-0  lg:bg-transparent -z-10 lg:z-10 lg:h-auto transition-all duration-300 ">
             <div className="bg-white shadow-md lg:bg-transparent lg:shadow-none py-10 lg:py-0 flex flex-col  lg:items-center lg:flex-row px-6 space-y-4 lg:space-y-0 lg:space-x-12  ">
-              <NavLink to="/" activeClassName="text-black font-medium">
-                <h3 className="font-sans text-gray-500 transition-[0.4s] hover:text-black hover:font-medium">
-                  {t("navbar.About Me")}
-                </h3>
-              </NavLink>
-              <NavLink to="/project" activeClassName="text-black font-medium">
+              <h3 className="font-sans text-gray-500 transition-[0.4s] hover:text-black hover:font-medium">
+                {t("navbar.About Me")}
+              </h3>
+              <a href="#project">
                 <h3 className="font-sans text-gray-500 transition-[0.4s] hover:text-black hover:font-medium">
                   {t("navbar.Project")}
                 </h3>
-              </NavLink>
-              <NavLink to="/contact" activeClassName="text-black font-medium">
+              </a>
+              <a href="#contact">
                 <h3 className="font-sans text-gray-500 transition-[0.4s] hover:text-black hover:font-medium">
                   {t("navbar.Contact")}
                 </h3>
-              </NavLink>
+              </a>
               <a
                 href="https://github.com/Mirmansur"
                 aria-label="GitHub Profile"
