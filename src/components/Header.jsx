@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "../i18n";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
+import { FaYoutube } from "react-icons/fa";
 
 const Header = () => {
   let { t, i18n } = useTranslation();
@@ -13,67 +14,88 @@ const Header = () => {
   }, [lang]);
 
   return (
-    <header className="Header fixed bg-white top-0 right-0 left-0 z-10 shadow-lg">
+    <header className="Header fixed bg-gradient-to-r from-gray-900 via-sky-900 to-gray-900 top-0 right-0 left-0 z-10 shadow-lg">
       <div className="container mx-auto">
-        <div className="header flex items-center justify-between">
+        <div className="header flex items-center justify-between py-4 px-4 lg:px-0">
+          {/* Logo */}
           <div className="logo">
-            <img src={logo} alt="Logo" className="rounded-full w-32 h-32" />
+            <img
+              src={logo}
+              alt="Logo"
+              className="rounded-full w-10 h-10 lg:w-32 lg:h-32 border-4 border-sky-500 shadow-lg"
+            />
           </div>
 
-          {/* Hamburger//////////////////////////////////////////////////////////////////// */}
+          {/* Hamburger Menu for Mobile */}
           <input className="peer hidden" type="checkbox" id="hamburger" />
           <label
-            className="peer-checked:bg-gray-800 block relative cursor-pointer lg:hidden border-2 border-gray-500 peer-checked:border-white p-3 rounded-md transition-all"
+            className="peer-checked:bg-gray-800 block relative cursor-pointer lg:hidden border-2 border-sky-500 p-3 rounded-md transition-all"
             htmlFor="hamburger"
           >
-            <div className="m-auto w-6 h-0.5 rounded bg-gray-500 transition-all duration-300 peer-checked:bg-white"></div>
-            <div className="m-auto mt-2 w-6 h-0.5 rounded bg-gray-500 transition-all duration-300 peer-checked:bg-white"></div>
+            <div className="m-auto w-6 h-0.5 rounded bg-gray-300 transition-all duration-300 peer-checked:bg-white"></div>
+            <div className="m-auto mt-2 w-6 h-0.5 rounded bg-gray-300 transition-all duration-300 peer-checked:bg-white"></div>
           </label>
-          {/* ////////////////////////////////////////////////////////////////////////////////// */}
-          <div className="-translate-y-full peer-checked:translate-y-0 lg:translate-y-0 inset-0 fixed lg:static pt-20 lg:pt-0  lg:bg-transparent -z-10 lg:z-10 lg:h-auto transition-all duration-300 ">
-            <div className="bg-white shadow-md lg:bg-transparent lg:shadow-none py-10 lg:py-0 flex flex-col  lg:items-center lg:flex-row px-6 space-y-4 lg:space-y-0 lg:space-x-12  ">
-              <h3 className="font-sans text-gray-500 transition-[0.4s] hover:text-black hover:font-medium">
-                {t("navbar.About Me")}
-              </h3>
+
+          {/* Navigation Links */}
+          <div className="-translate-y-full peer-checked:translate-y-0 lg:translate-y-0 inset-0 fixed lg:static pt-20 lg:pt-0 lg:bg-transparent -z-10 lg:z-10 lg:h-auto transition-all duration-300 ">
+            <div className="bg-gray-900 shadow-md lg:bg-transparent lg:shadow-none py-10 lg:py-0 flex flex-col lg:items-center lg:flex-row px-6 space-y-4 lg:space-y-0 lg:space-x-12 ">
+              <a href="#about">
+                <h3 className="font-sans text-gray-400 transition-[0.4s] hover:text-sky-500 hover:font-medium">
+                  {t("navbar.About Me")}
+                </h3>
+              </a>
               <a href="#project">
-                <h3 className="font-sans text-gray-500 transition-[0.4s] hover:text-black hover:font-medium">
+                <h3 className="font-sans text-gray-400 transition-[0.4s] hover:text-sky-500 hover:font-medium">
                   {t("navbar.Project")}
                 </h3>
               </a>
               <a href="#contact">
-                <h3 className="font-sans text-gray-500 transition-[0.4s] hover:text-black hover:font-medium">
+                <h3 className="font-sans text-gray-400 transition-[0.4s] hover:text-sky-500 hover:font-medium">
                   {t("navbar.Contact")}
                 </h3>
               </a>
-              <a
-                href="https://github.com/Mirmansur"
-                aria-label="GitHub Profile"
-              >
-                <button className="border-none">
-                  <FaGithub className="text-2xl" />
-                </button>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/mirmansur-rakhmatov-46b37732b/"
-                aria-label="LinkedIn Profile"
-              >
-                <button className="border-none">
-                  <FaLinkedin className="text-2xl" />
-                </button>
-              </a>
+
+              <div className="flex gap-4">
+                <a
+                  href="https://github.com/Mirmansur"
+                  aria-label="GitHub Profile"
+                >
+                  <button className="text-gray-400 hover: transition-colors">
+                    <FaGithub className="text-2xl" />
+                  </button>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mirmansur-rakhmatov-46b37732b/"
+                  aria-label="LinkedIn Profile"
+                >
+                  <button className="text-gray-400 hover:text-sky-500 transition-colors">
+                    <FaLinkedin className="text-2xl" />
+                  </button>
+                </a>
+                <a
+                  href="https://www.youtube.com/@mirmansurrakhmatov"
+                  aria-label="LinkedIn Profile"
+                >
+                  <button className="text-gray-400 hover:text-red-800 transition-colors">
+                    <FaYoutube className="text-2xl" />
+                  </button>
+                </a>
+              </div>
+
+              {/* Language Selector */}
               <select
-                className="outline-none w-24 p-2 rounded-md shadow-lg "
+                className="outline-none bg-gray-800 text-gray-400 w-24 p-2 rounded-md shadow-lg border border-gray-600"
                 value={lang}
                 onChange={(e) => setLang(e.target.value)}
                 aria-label="Select Language"
               >
-                <option className="bg-white" value="en">
+                <option className="bg-gray-700" value="en">
                   Eng
                 </option>
-                <option className="bg-white" value="ru">
+                <option className="bg-gray-700" value="ru">
                   Рус
                 </option>
-                <option className="bg-white" value="uz">
+                <option className="bg-gray-700" value="uz">
                   Uz
                 </option>
               </select>

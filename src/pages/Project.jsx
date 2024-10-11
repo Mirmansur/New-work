@@ -21,7 +21,7 @@ import icon8 from "../assets/sass.svg";
 import icon11 from "../assets/github.svg";
 import akar from "../assets/akar.svg";
 import vue from "../assets/vue3.png";
-import next from "../assets/next.png";
+import next from "../assets/next2.png";
 import { useTranslation } from "react-i18next";
 
 const projects = [
