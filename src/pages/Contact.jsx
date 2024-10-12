@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo1.png";
-import { FaGithub, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import axios from "axios";
 
@@ -192,29 +192,37 @@ const Contact = () => {
               <p className="font-sans font-medium text-xl text-gray-400">
                 +998 94 626 15 90
               </p>
-              <div className="social-icons flex items-center gap-6 mt-4">
+              <div className="flex gap-4">
                 <a
                   href="https://github.com/Mirmansur"
-                  className="text-3xl"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  aria-label="GitHub Profile"
                 >
-                  <FaGithub />
+                  <button className="text-gray-400 hover: transition-colors">
+                    <FaGithub className="text-2xl" />
+                  </button>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/mirmansur-rakhmatov-46b37732b/"
-                  className="text-3xl hover:text-sky-500 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  aria-label="LinkedIn Profile"
                 >
-                  <FaLinkedin />
+                  <button className="text-gray-400 hover:text-sky-500 transition-colors">
+                    <FaLinkedin className="text-2xl" />
+                  </button>
                 </a>
                 <a
                   href="https://www.youtube.com/@mirmansurrakhmatov"
-                  aria-label="YouTube Channel"
+                  aria-label="LinkedIn Profile"
                 >
                   <button className="text-gray-400 hover:text-red-800 transition-colors">
-                    <FaYoutube className="text-3xl" />
+                    <FaYoutube className="text-2xl" />
+                  </button>
+                </a>
+                <a
+                  href="https://www.instagram.com/mirmansur_developer/"
+                  aria-label="LinkedIn Profile"
+                >
+                  <button className="text-gray-400 hover:text-rose-700 transition-colors">
+                    <FaInstagram className="text-2xl" />
                   </button>
                 </a>
               </div>

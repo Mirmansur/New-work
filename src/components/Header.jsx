@@ -1,10 +1,8 @@
 import logo from "../assets/logo1.png";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "../i18n";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
-import { FaYoutube } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+
 import Resume from "../assets/Mirmansur.pdf";
 const Header = () => {
   let { t, i18n } = useTranslation();
@@ -53,40 +51,6 @@ const Header = () => {
                 </h3>
               </a>
 
-              <div className="flex gap-4">
-                <a
-                  href="https://github.com/Mirmansur"
-                  aria-label="GitHub Profile"
-                >
-                  <button className="text-gray-400 hover: transition-colors">
-                    <FaGithub className="text-2xl" />
-                  </button>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/mirmansur-rakhmatov-46b37732b/"
-                  aria-label="LinkedIn Profile"
-                >
-                  <button className="text-gray-400 hover:text-sky-500 transition-colors">
-                    <FaLinkedin className="text-2xl" />
-                  </button>
-                </a>
-                <a
-                  href="https://www.youtube.com/@mirmansurrakhmatov"
-                  aria-label="LinkedIn Profile"
-                >
-                  <button className="text-gray-400 hover:text-red-800 transition-colors">
-                    <FaYoutube className="text-2xl" />
-                  </button>
-                </a>
-                <a
-                  href="https://www.instagram.com/mirmansur_developer/"
-                  aria-label="LinkedIn Profile"
-                >
-                  <button className="text-gray-400 hover:text-rose-700 transition-colors">
-                    <FaInstagram className="text-2xl" />
-                  </button>
-                </a>
-              </div>
               <a
                 href={Resume}
                 download="Mening_Resume.pdf"
