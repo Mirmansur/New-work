@@ -11,7 +11,7 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <div className="AboutMe">
+    <div id="about" className="AboutMe">
       <div className="container mx-auto px-4">
         <div className="aboutme flex flex-col items-center">
           <div

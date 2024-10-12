@@ -98,7 +98,7 @@ const Project = () => {
   }, []);
 
   return (
-    <div className="Project py-16">
+    <div id="product" className="Project py-16">
       <div className="container mx-auto px-4">
         <div className="project mt-20">
           <div
