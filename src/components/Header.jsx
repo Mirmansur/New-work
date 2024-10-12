@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-
+import Resume from "../assets/Mirmansur.pdf";
 const Header = () => {
   let { t, i18n } = useTranslation();
   const [lang, setLang] = useState(localStorage.getItem("i18nextLng") || "en");
@@ -87,6 +87,15 @@ const Header = () => {
                   </button>
                 </a>
               </div>
+              <a
+                href={Resume}
+                download="Mening_Resume.pdf"
+                className="inline-block"
+              >
+                <button className="bg-sky-500 hover:bg-sky-600 text-white font-bold p-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300 ease-in-out">
+                  Resumen
+                </button>
+              </a>
 
               <select
                 className="outline-none bg-gray-800 text-gray-400 w-24 p-2 rounded-md shadow-lg border border-gray-600"
