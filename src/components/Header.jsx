@@ -1,4 +1,3 @@
-import logo from "../assets/logo1.png";
 import "../i18n";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
@@ -15,13 +14,9 @@ const Header = () => {
   return (
     <header className="Header fixed bg-gradient-to-r from-gray-900 via-sky-900 to-gray-900 top-0 right-0 left-0 z-10 shadow-lg">
       <div className="container mx-auto">
-        <div className="header flex items-center justify-between p-1 lg:px-0">
+        <div className="header flex items-center justify-between p-4 lg:px-0">
           <div className="logo">
-            <img
-              src={logo}
-              alt="Logo"
-              className="rounded-full w-10 h-10 lg:w-32 lg:h-32 border-4 border-sky-500 shadow-lg"
-            />
+            <h1>Mirmansur</h1>
           </div>
 
           <input className="peer hidden" type="checkbox" id="hamburger" />
